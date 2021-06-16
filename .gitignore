@@ -6,3 +6,4 @@ data/
 business_context/
 data_references/
 .idea/
+/venv/
