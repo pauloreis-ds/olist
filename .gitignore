@@ -2,6 +2,8 @@
 README.ipynb
 
 **/.ipynb_checkpoints
+**/__pycache__
+
 data/
 business_context/
 data_references/
