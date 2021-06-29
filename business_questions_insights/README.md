@@ -41,6 +41,9 @@ _We want answers!_
 
 _delivered orders only_
 
+## Results
 
+### Dashboard
+<img src="images/dashboard_1.PNG" width="850"/>
 
-<img src="images/dashboard_1.png" width="900" />
+<img src="images/dashboard_2.PNG" width="850"/>
