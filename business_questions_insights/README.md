@@ -46,4 +46,6 @@ _delivered orders only_
 ### Dashboard
 <img src="images/dashboard_1.PNG" width="850"/>
 
+<br>
+
 <img src="images/dashboard_2.PNG" width="850"/>
