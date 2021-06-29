@@ -43,4 +43,4 @@ _delivered orders only_
 
 
 
-<img src="images/dashboard_1.png" width="900" />
+<img src="images/dashboard_1.PNG" width="900" />
