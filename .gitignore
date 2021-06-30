@@ -11,3 +11,4 @@ data_references/
 /venv/
 /.env
 /business_questions_insights/powerbi/
+/project_assumptions.ipynb           # REMOVE LATER
