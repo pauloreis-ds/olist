@@ -6,6 +6,7 @@ from database import PostegreSQL
 from functools import reduce
 import graph
 
+
 class SellerSegmentationPipeline:
     def __init__(self, data_frame):
         self.sellers_sales_df = data_frame
@@ -59,8 +60,31 @@ class SellerSegmentationPipeline:
         return self
 
 
-# streamlit run business_questions_insights\streamlit_rfv_seller_segmentation_app\streamlit_rfv_seller_segmentation.py
+def st_get_analysis_time_frame():
+    months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    st.sidebar.title("Analysis Time Frame")
+    st.sidebar.write("From:")
+    initial_month = st.sidebar.selectbox('Month', months)
+    inital_year = st.sidebar.selectbox('Year', [2018, 2017, 2016])
+    st.sidebar.write("To:")
+    final_month = st.sidebar.selectbox('Month ', months)
+    final_year = st.sidebar.selectbox('Year ', [2019, 2018, 2017, 2016])
+    return initial_month, inital_year, final_month, final_year
+
+
+def count_classes_observations(series):
+    count = pd.concat([series.value_counts(), series.value_counts(normalize=True)*100], axis=1)
+    count.columns = ["quantity_of_sellers", "percentage"]
+    return count
+
+
+def space(spaces):
+    for space in range(spaces):
+        st.markdown("#")
+
+
 if __name__ == "__main__":
+    # INTIAL APP CONFIGURATION
     img = 'https://raw.githubusercontent.com/pauloreis-ds/Paulo-Reis-Data-Science/master/Paulo%20Reis/PRojects.png'
     st.set_page_config(page_title='Seller RFV Segmentation', page_icon=img)
 
@@ -70,24 +94,16 @@ if __name__ == "__main__":
     set_dotenv()
     db = PostegreSQL(password=get_password())
 
-    months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-
-    st.sidebar.title("Analysis Time Frame")
-    st.sidebar.write("From:")
-    initial_month = st.sidebar.selectbox('Month', months)
-    inital_year = st.sidebar.selectbox('Year', [2018, 2017, 2016])
-    st.sidebar.write("To:")
-    final_month = st.sidebar.selectbox('Month ', months)
-    final_year = st.sidebar.selectbox('Year ', [2019, 2018, 2017, 2016])
-
+    # QUERYING DATA FOR ANALYSIS
+    initial_month, inital_year, final_month, final_year = st_get_analysis_time_frame()
     initial_date = date(inital_year, map_month(initial_month), 1)   
-    final_date = date(final_year, map_month(final_month), 1)     
+    final_date = date(final_year, map_month(final_month), 1)
 
     # check_date_range()
     # if initial_date > final_date or initial_date == final_date:
     #     st.error(f"Invalid Date Range From {initial_date} To {final_date}")
 
-    approved_orders_only = st.checkbox("Include only Approved Orders", help='also includes delivered ones')
+    approved_orders_only = st.sidebar.checkbox("Include only Approved Orders", help='also includes delivered and shipped ones')
     if approved_orders_only:
         order_status_q = "AND order_status in ('approved', 'delivered', 'shipped', 'invoiced')"
     else:
@@ -100,44 +116,53 @@ if __name__ == "__main__":
     cols = ['order_id', 'order_approved_at', 'purchase_date', 'price', 'seller_id']
     sellers_sales_df = pd.DataFrame(db.execute(sellers_pre_abt_query), columns=cols).dropna()
 
+    # PROCESSING DATA
     seller_abt_pipeline = SellerSegmentationPipeline(sellers_sales_df)
-
     seller_abt_pipeline.create_sellers_sgmt_abt(analysis_date=final_date).classify_sellers()
     sellers_sgmt_abt = seller_abt_pipeline.sellers_sgmt_abt
 
-    seller_status_df = pd.concat([sellers_sgmt_abt['seller_status'].value_counts(),
-                                  sellers_sgmt_abt['seller_status'].value_counts(normalize=True)],
-                                 axis=1)
-    seller_status_df.columns = ["quantity_of_sellers", "percentage"]
-    st.write(seller_status_df)
+    # ANALYSING
+    seller_status_df = count_classes_observations(sellers_sgmt_abt['seller_status'])
+    st.dataframe(seller_status_df)
 
-    seller_rank_df = pd.concat([sellers_sgmt_abt['value_frequency_segment'].value_counts(),
-                                sellers_sgmt_abt['value_frequency_segment'].value_counts(normalize=True)],
-                               axis=1)
+    seller_rank_df = count_classes_observations(sellers_sgmt_abt['value_frequency_segment'])
+    st.dataframe(seller_rank_df, width=520)
 
-    seller_rank_df.columns = ["quantity_of_sellers", "percentage"]
-    st.write(seller_rank_df)
+    # space(3)
+    st.markdown("## Stats")
+    sellers_stats = sellers_sgmt_abt.groupby("value_frequency_segment").agg(['mean', 'sum'])[
+                    ['total_revenue', 'orders_quantity']]
+    st.dataframe(sellers_stats)
+    sellers_stats = sellers_sgmt_abt.groupby("value_frequency_segment").agg(['mean', 'sum'])[
+                    ['revenue_per_month', 'orders_per_month']]
+    st.dataframe(sellers_stats)
 
-    cmap = {
-        'ACTIVE': "#1f77b4",
-        'NEW SELLER': "#2ca02c",
-        'INACTIVE': "#c1c0b9"
-    }
-    st.pyplot(graph.scatter(sellers_sgmt_abt['frequency_rank'], sellers_sgmt_abt['value_rank'],
-                            c=sellers_sgmt_abt['seller_status'].map(cmap), s=5, l=sellers_sgmt_abt['seller_status'],
-                            x_label="Frequency Rank", y_label="Value Rank", title="RFM Seller Segmentation"))
+    space(3)
+    legend_order = ['ACTIVE', 'INACTIVE', 'NEW SELLER']
+    palette = ['#1f77b4','#c1c0b9','#2ca02c']
+    st.pyplot(graph.scatterplot(data=sellers_sgmt_abt, x='frequency_rank', y='value_rank',
+                                hue='seller_status', hue_order=legend_order,
+                                x_label="Frequency Rank", y_label="Value Rank",
+                                title="Seller Activity Status", palette=palette))
+    space(2)
+    st.pyplot(graph.scatterplot(data=sellers_sgmt_abt, x='orders_per_month', y='revenue_per_month',
+                                hue='seller_status', hue_order=legend_order,
+                                x_label="Orders per month", y_label="Revenue per month",
+                                title="Seller Activity Status", palette=palette, x_lim=[-1, 20], y_lim=[-1, 2000]))
 
-    cmap_ = {
-        'HIGH VALUE': "#2ca02c",
-        'SUPER PRODUCTIVE': "#ff7f0e",
-        'PRODUCTIVE': "#1f77b4",
-        'LOW VALUE LOW FREQUENCY': "#d62728",
-        'HIGH FREQUENCY': "#9467bd"
-    }
+    space(2)
+    legend_order = ['SUPER PRODUCTIVE', 'PRODUCTIVE', 'HIGH VALUE', 'HIGH FREQUENCY', 'LOW VALUE LOW FREQUENCY']
+    palette = ['#ff7f0e', '#1f77b4', '#2ca02c', '#9467bd', '#d62728']
+    st.pyplot(graph.scatterplot(data=sellers_sgmt_abt, x='frequency_rank', y='value_rank',
+                                hue='value_frequency_segment', hue_order=legend_order,
+                                x_label="Frequency Rank", y_label="Value Rank",
+                                title="RFM Seller Segmentation", palette=palette))
+    space(2)
+    st.pyplot(graph.scatterplot(data=sellers_sgmt_abt, x='orders_per_month', y='revenue_per_month',
+                                hue='value_frequency_segment', hue_order=legend_order,
+                                x_label="Orders per month", y_label="Revenue per month",
+                                title="RFM Seller Segmentation", palette=palette, x_lim=[-1, 20], y_lim=[-1, 2000]))
 
-    st.pyplot(graph.scatter(sellers_sgmt_abt['frequency_rank'], sellers_sgmt_abt['value_rank'],
-                            c=sellers_sgmt_abt['value_frequency_segment'].map(cmap_), s=5,
-                            l=sellers_sgmt_abt['seller_status'],
-                            x_label="Frequency Rank", y_label="Value Rank", title="RFM Seller Segmentation"))
+
 
 # streamlit run business_questions_insights\streamlit_rfv_seller_segmentation_app\streamlit_rfv_seller_segmentation.py
