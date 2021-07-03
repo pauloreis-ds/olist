@@ -54,12 +54,11 @@ So... Yes, **there are sellers who deserve to be highlighted:**
 
 <img src="images/type_of_sellers.png" width="500"/>
 
-[Web App Visual Approach.](https://share.streamlit.io/pauloreis-ds/olist_streamlit_rfv_seller_segmentation/main/main.py)
+[**Web App Visual Approach.**](https://share.streamlit.io/pauloreis-ds/olist_streamlit_rfv_seller_segmentation/main/main.py)
 
 <a href="https://share.streamlit.io/pauloreis-ds/olist_streamlit_rfv_seller_segmentation/main/main.py" target="_blank">
-    <img src="images/question_2_streamlit.PNG" width="850"/>
+    <img src="images/question_2_streamlit.PNG" width="900"/>
 </a>
-
 
         ps: Inactive Sellers (sellers more than 10 months with no sales)
             New Sellers (sellers who have been in the database for a maximum of 2 months)
