@@ -35,3 +35,23 @@ _delivered orders only_
 <br>
 
 <img src="images/dashboard_2.PNG" width="850"/>
+
+
+### Business Questions
+
+- **Can we give the same benefits to all shopkeepers (sellers)? Or is there one that deserves to be highlighted?**
+
+One form of evaluation is to give benefits based on productivity, using RFM (Recency, Frequency and Value) 
+as main metrics.
+
+So... Yes, **there are sellers who deserve to be highlighted:**
+
+- **Super Productive:** High Value High Frequency! Top 10% of sales and frequency. 
+- **Productive:** lots of sales, high revenue. 
+- **High Value:** few sales, but great revenue values.
+- **High Frequency:** low revenue value, but many sales.
+- **Low Value Low Frequency:** low revenue value and few sales.
+
+<img src="images/type_of_sellers.PNG" width="500"/>
+
+[Web App Visual Approach.](https://share.streamlit.io/pauloreis-ds/olist_streamlit_rfv_seller_segmentation/main/main.py)
