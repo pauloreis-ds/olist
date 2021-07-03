@@ -52,6 +52,9 @@ So... Yes, **there are sellers who deserve to be highlighted:**
 - **High Frequency:** low revenue value, but many sales.
 - **Low Value Low Frequency:** low revenue value and few sales.
 
-<img src="images/type_of_sellers.PNG" width="500"/>
+<img src="images/type_of_sellers.png" width="500"/>
 
 [Web App Visual Approach.](https://share.streamlit.io/pauloreis-ds/olist_streamlit_rfv_seller_segmentation/main/main.py)
+
+        ps: Inactive Sellers (sellers more than 10 months with no sales)
+            New Sellers (sellers who have been in the database for a maximum of 2 months)
