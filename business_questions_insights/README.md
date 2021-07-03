@@ -41,7 +41,7 @@ _delivered orders only_
 
 - **Can we give the same benefits to all shopkeepers (sellers)? Or is there one that deserves to be highlighted?**
 
-One form of evaluation is to give benefits based on productivity, using RFM (Recency, Frequency and Value) 
+One form of evaluation is to give benefits based on productivity, using RFV (Recency, Frequency and Value) 
 as main metrics.
 
 So... Yes, **there are sellers who deserve to be highlighted:**
@@ -58,3 +58,5 @@ So... Yes, **there are sellers who deserve to be highlighted:**
 
         ps: Inactive Sellers (sellers more than 10 months with no sales)
             New Sellers (sellers who have been in the database for a maximum of 2 months)
+
+<img src="images/question_2_streamlit.PNG" width="850"/>
