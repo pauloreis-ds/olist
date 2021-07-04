@@ -72,9 +72,10 @@ So... Yes, **there are sellers who deserve to be highlighted:**
 
 <br>
 
-- **Is there a difference in the amount of freight charged in different regions, cities? Or can we apply the shipping subsidy rules to any location?**
+- **Is there a difference in the amount of freight charged in different regions, cities?<br> 
+  Or can we apply the shipping subsidy rules to any location?**
 
-Yes, there is a difference among cities and regions.
+Yes, there is a difference among cities and regions. Therefore, we must apply the shipping subsidy rules according to the location.
 
 <p align="center">
     <img src="images/avg_freight_by_state.png" width="800"/>
@@ -83,3 +84,8 @@ Yes, there is a difference among cities and regions.
 <p align="center">
     <img src="images/avg_freight_by_region.png" width="800"/>
 </p>
+
+
+[<img align="right" width="60" height="60" src="https://github.com/pauloreis-ds/Paulo-Reis-Data-Science/blob/master/Paulo%20Reis/Pauloreis01.png">](https://github.com/pauloreis-ds)
+
+---
