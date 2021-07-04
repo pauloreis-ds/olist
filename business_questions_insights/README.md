@@ -72,6 +72,8 @@ So... Yes, **there are sellers who deserve to be highlighted:**
 
 <br>
 
+<br>
+
 - **Is there a difference in the amount of freight charged in different regions, cities?<br> 
   Or can we apply the shipping subsidy rules to any location?**
 
