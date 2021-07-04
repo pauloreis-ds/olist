@@ -63,3 +63,10 @@ So... Yes, **there are sellers who deserve to be highlighted:**
         ps: Inactive Sellers (sellers more than 10 months with no sales)
             New Sellers (sellers who have been in the database for a maximum of 2 months)
 
+- Is there a difference in the amount of freight charged in different regions, cities? Or can we apply the shipping subsidy rules to any location?**
+
+Yes, there is a difference among cities and regions.
+
+<img src="images/avg_freight_by_state.png" width="750"/>
+
+<img src="images/avg_freight_by_region.png" width="750"/>
