@@ -30,12 +30,15 @@ _delivered orders only_
 ## Results
 
 ### Dashboard
-<img src="images/dashboard_1.PNG" width="850"/>
+<p align="center">
+    <img src="images/dashboard_1.PNG" width="850"/>
+</p>
 
 <br>
 
-<img src="images/dashboard_2.PNG" width="850"/>
-
+<p align="center">
+    <img src="images/dashboard_2.PNG" width="850"/>
+</p>
 
 ### Business Questions
 
@@ -52,21 +55,31 @@ So... Yes, **there are sellers who deserve to be highlighted:**
 - **High Frequency:** low revenue value, but many sales.
 - **Low Value Low Frequency:** low revenue value and few sales.
 
-<img src="images/type_of_sellers.png" width="500"/>
+<p align="center">
+    <img src="images/type_of_sellers.png" width="500"/>
+</p>
 
 [**Web App Visual Approach.**](https://share.streamlit.io/pauloreis-ds/olist_streamlit_rfv_seller_segmentation/main/main.py)
 
-<a href="https://share.streamlit.io/pauloreis-ds/olist_streamlit_rfv_seller_segmentation/main/main.py" target="_blank">
-    <img src="images/question_2_streamlit.PNG" width="900"/>
-</a>
+<p align="center">
+    <a href="https://share.streamlit.io/pauloreis-ds/olist_streamlit_rfv_seller_segmentation/main/main.py" target="_blank">
+        <img src="images/question_2_streamlit.PNG" width="900"/>
+    </a>
+</p>
 
         ps: Inactive Sellers (sellers more than 10 months with no sales)
             New Sellers (sellers who have been in the database for a maximum of 2 months)
 
-- Is there a difference in the amount of freight charged in different regions, cities? Or can we apply the shipping subsidy rules to any location?**
+<br>
+
+- **Is there a difference in the amount of freight charged in different regions, cities? Or can we apply the shipping subsidy rules to any location?**
 
 Yes, there is a difference among cities and regions.
 
-<img src="images/avg_freight_by_state.png" width="750"/>
+<p align="center">
+    <img src="images/avg_freight_by_state.png" width="800"/>
+</p>
 
-<img src="images/avg_freight_by_region.png" width="750"/>
+<p align="center">
+    <img src="images/avg_freight_by_region.png" width="800"/>
+</p>
