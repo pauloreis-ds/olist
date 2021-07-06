@@ -87,6 +87,18 @@ Yes, there is a difference among cities and regions. Therefore, we must apply th
     <img src="images/avg_freight_by_region.png" width="800"/>
 </p>
 
+<br>
+
+<br>
+
+- **Is our product catalog comprehensive? Or does it focus on specific categories?**
+
+Yes, it is, but there are a large number of purchases for some specific categories.
+
+<p align="center">
+    <img src="images/orders_by_category_2018.png" width="800"/>
+</p>
+
 
 [<img align="right" width="60" height="60" src="https://github.com/pauloreis-ds/Paulo-Reis-Data-Science/blob/master/Paulo%20Reis/Pauloreis01.png">](https://github.com/pauloreis-ds)
 
