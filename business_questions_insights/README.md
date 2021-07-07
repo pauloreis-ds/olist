@@ -15,9 +15,6 @@ _We want answers!_
 - Is our product catalog comprehensive? Or does it focus on specific categories?
 
 
-- Do we always sell the same products? Or are there seasonalities?
-
-
 
 **Dashboard that analyzes the company's latest sales data that can be shared with Regional leads and their respective analysts:**
 
@@ -60,6 +57,7 @@ So... Yes, **there are sellers who deserve to be highlighted:**
 </p>
 
 [**Web App Visual Approach.**](https://share.streamlit.io/pauloreis-ds/olist_streamlit_rfv_seller_segmentation/main/main.py)
+[Code.](https://github.com/pauloreis-ds/olist_streamlit_rfv_seller_segmentation)
 
 <p align="center">
     <a href="https://share.streamlit.io/pauloreis-ds/olist_streamlit_rfv_seller_segmentation/main/main.py" target="_blank">
