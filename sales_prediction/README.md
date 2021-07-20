@@ -17,3 +17,6 @@ will be weak and will be able to better allocate budget among other marketing ac
 
 
 > **ps: We will use the data to forecast the second quarter of 2018 and the third quarter will be our "production data".**
+
+
+<img align="center" width="500" src="https://github.com/pauloreis-ds/portfolio/blob/main/images/projects/in_progress.jpg">
