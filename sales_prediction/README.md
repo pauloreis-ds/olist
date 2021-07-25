@@ -2,7 +2,7 @@
 
 **Motivation! What's the context?**
 - In 2017 Olist started to forecast its monthly sales based on the average revenue from 3 months before. But now the company
-  wants to be able to predict future sales more accurately.
+  wants to be able to predict future sales more accurately with a wider time range (3 months).
 
 **Why?**
 - To efficiently allocate resources for future projects, growth and manage its cash flow. 
