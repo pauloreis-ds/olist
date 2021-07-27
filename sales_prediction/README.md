@@ -18,5 +18,30 @@ will be weak and will be able to better allocate budget among other marketing ac
 
 > **ps: We will use the data to forecast the second quarter of 2018 and the third quarter will be our "production data".**
 
+## Result
 
-<img align="center" width="450" height="220" src="https://github.com/pauloreis-ds/portfolio/blob/main/images/projects/in_progress.jpg">
+<p align="justify">
+<strong>
+In the beginning of this project, Olist moving average predictive model has been showing large errors,
+even though it was getting lower. And for next Quarter, Olist needs a model with an error lower than 6.75%
+(current moving average error).
+</strong>
+</p>
+
+<img align="center" width="850" src="images/moving_average_baseline.png">
+
+<p align="justify">
+<strong>
+The Project was successful, since We deacrease the error when predicting the sales from second quarter of 2018.
+Now, Olist can forecast the 3rd quarter expecting an error of 5.7% above or below the real revenue value, instead of 6.7%.
+And... Yes, after two months of trial the arima model has been showing to be a more accurate model.
+</strong>
+</p>
+
+<img align="center" width="850" src="images/arima_vs_moving_average.png">
+
+<p align="justify">
+<strong>
+</strong>
+</p>
+
