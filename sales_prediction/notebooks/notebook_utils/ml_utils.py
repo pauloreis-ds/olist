@@ -8,5 +8,5 @@ def evaluation(y_true, y_pred, timeline_message=None, show_results=True):
         print(timeline_message)    
     if show_results:
         print(f'''On average, our predictions are {mape.round(2)}% above or below the real value.''')
-        print(f'''Which means an error of about R$ {mae}''')
+        print(f'''Which means an error of about R$ {"{:,.2f}".format(mae)}''')
     return mae, mape
