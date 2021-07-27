@@ -21,27 +21,31 @@ will be weak and will be able to better allocate budget among other marketing ac
 ## Result
 
 <p align="justify">
-<strong>
 In the beginning of this project, Olist moving average predictive model has been showing large errors,
-even though it was getting lower. And for next Quarter, Olist needs a model with an error lower than 6.75%
-(current moving average error).
-</strong>
+even though it was getting lower. And for next Quarter, <strong>Olist needs a model with an error lower than 6.75%
+(current moving average error of about R$ 73,935.56).</strong>
 </p>
 
-<img align="center" width="850" src="images/moving_average_baseline.png">
+<br>
+
+<p align="center">
+    <img src="images/moving_average_baseline.png" width="850"/>
+</p>
 
 <p align="justify">
-<strong>
-The Project was successful, since We deacrease the error when predicting the sales from second quarter of 2018.
-Now, Olist can forecast the 3rd quarter expecting an error of 5.7% above or below the real revenue value, instead of 6.7%.
-And... Yes, after two months of trial the arima model has been showing to be a more accurate model.
-</strong>
+<strong> The Project was successful</strong>, since We deacrease the error when predicting the sales from second quarter of 2018.
+Now, Olist can forecast the 3rd quarter expecting an error of 5.7% (R$ 64,127.08) above or below the real revenue value, 
+instead of 6.7% (R$ 73,935.56). <strong>And after two months of trial the arima model has been showing to be a more accurate model. During this
+trial Arima has shown an actual error of 3.18% (R$ 31,915.91) whereas if Olist had continued to rely on the old moving average it would have to deal
+with an error equals to 5.29% (R$ 52,777.88).</strong>
+
 </p>
 
-<img align="center" width="850" src="images/arima_vs_moving_average.png">
+<br>
 
-<p align="justify">
-<strong>
-</strong>
+<p align="center">
+    <img src="images/arima_vs_moving_average.png" width="850"/>
 </p>
+
+**So, now, Olist is able to forecast 3 months ahead instead of 1 and more accurately than it has been doing.**
 
