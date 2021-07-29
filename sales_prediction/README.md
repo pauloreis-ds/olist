@@ -1,8 +1,8 @@
 ## Sales Forecast
 
 **Motivation! What's the context?**
-- In 2017 Olist started to forecast its monthly sales based on the average revenue from 3 months before. But now the company
-  wants to be able to predict future sales more accurately with a wider time range (3 months).
+- In 2017 Olist started to forecast its monthly sales based on the average revenue from 3 months before.<br>
+  But now the company wants to be able to predict future sales more accurately with a wider time range (3 months).
 
 **Why?**
 - To efficiently allocate resources for future projects, growth and manage its cash flow. 
@@ -19,6 +19,7 @@ will be weak and will be able to better allocate budget among other marketing ac
 > **ps: We will use the data to forecast the second quarter of 2018 and the third quarter will be our "production data".**
 
 ## Result
+[Arima Notebook.](https://nbviewer.jupyter.org/github/pauloreis-ds/olist/blob/main/sales_prediction/notebooks/1.4-pr-sales-prediction-arima.ipynb)
 
 <p align="justify">
 In the beginning of this project, Olist moving average predictive model has been showing large errors,
@@ -37,7 +38,7 @@ even though it was getting lower. And for next Quarter, <strong>Olist needs a mo
 Now, Olist can forecast the 3rd quarter expecting an error of 5.7% (R$ 64,127.08) above or below the real revenue value, 
 instead of 6.7% (R$ 73,935.56). <strong>And after two months of trial the arima model has been showing to be a more accurate model. During this
 trial Arima has shown an actual error of 3.18% (R$ 31,915.91) whereas if Olist had continued to rely on the old moving average it would have to deal
-with an error equals to 5.29% (R$ 52,777.88).</strong>
+with an error equals to 7.74%% (R$ 77,616.39).</strong>
 
 </p>
 
