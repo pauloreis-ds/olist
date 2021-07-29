@@ -38,7 +38,7 @@ even though it was getting lower. And for next Quarter, <strong>Olist needs a mo
 Now, Olist can forecast the 3rd quarter expecting an error of 5.7% (R$ 64,127.08) above or below the real revenue value, 
 instead of 6.7% (R$ 73,935.56). <strong>And after two months of trial the arima model has been showing to be a more accurate model. During this
 trial Arima has shown an actual error of 3.18% (R$ 31,915.91) whereas if Olist had continued to rely on the old moving average it would have to deal
-with an error equals to 7.74%% (R$ 77,616.39).</strong>
+with an error equals to 7.74% (R$ 77,616.39).</strong>
 
 </p>
 

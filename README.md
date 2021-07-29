@@ -13,6 +13,8 @@ through the Olist Store and ship them directly to the customers using the compan
 
 Previously: [Datasets to PostgreSQL Database](https://github.com/pauloreis-ds/olist-database-postgresql).
 
+[Projects Proposals and Assumptions.](https://nbviewer.jupyter.org/github/pauloreis-ds/olist/blob/main/complete_projects_proposals_and_assumptions.ipynb)
+
 ## [Data Analysis](https://github.com/pauloreis-ds/olist/tree/main/business_questions_insights)
 
 > **The company's business areas have some questions and challenges such as:**
