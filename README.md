@@ -5,6 +5,10 @@ and with a single contract. Those merchants are able to sell their products
 through the Olist Store and ship them directly to the customers using the company logistics partners.
 </p>
 
+<p align="center">
+    <img src="images/olist.jpg" width="850"/>
+</p>
+
 # Olist Business Objectives
 
 Previously: [Datasets to PostgreSQL Database](https://github.com/pauloreis-ds/olist-database-postgresql).
