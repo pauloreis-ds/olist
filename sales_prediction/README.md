@@ -49,3 +49,4 @@ with an error equals to 7.74% (R$ 77,616.39).</strong>
 </p>
 
 **So, now, Olist is able to forecast 3 months ahead instead of 1 and more accurately than it has been doing.**
+
