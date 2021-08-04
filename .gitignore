@@ -11,6 +11,6 @@ data_references/
 /venv/
 /.env
 /business_questions_insights/powerbi/
-/project_assumptions.ipynb               # REMOVE LATER
+/project_assumptions.ipynb
 /sales_prediction/hypotheses_mind_map/
 /olistlib                                # REMOVE LATER

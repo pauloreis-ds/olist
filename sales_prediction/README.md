@@ -14,7 +14,7 @@ will be weak and will be able to better allocate budget among other marketing ac
 
 **What is the deliverable?**
 - A dashboard with the information about the forecast.
-
+> ps: got [Telegram Bot](#Telegram-Bot) instead
 
 > **ps: We will use the data to forecast the second quarter of 2018 and the third quarter will be our "production data".**
 
@@ -50,3 +50,20 @@ with an error equals to 7.74% (R$ 77,616.39).</strong>
 
 **So, now, Olist is able to forecast 3 months ahead instead of 1 and more accurately than it has been doing.**
 
+### Telegram Bot
+
+As an extra task I decided to create this bot.<br>
+You can found it on telegram searching for "OlistBot" or "@olist_telegram_bot".<br>
+Then, you just have to write the region (e.g north) you want to know the forecast.
+
+<p align="center">
+    <img src="images/olist_bot.PNG" width="850"/>
+</p>
+
+> The app might be sleeping, so it can take a while for heroku to restart it.
+
+**Code:**<br>
+[Model API Deployment](https://github.com/pauloreis-ds/olist_regional_sales_forecast_app) <br>
+[Telegram Bot](https://github.com/pauloreis-ds/olist-telegram-bot) <br>
+
+(https://web.telegram.org/z/#1862189868)
