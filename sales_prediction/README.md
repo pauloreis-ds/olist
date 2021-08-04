@@ -14,7 +14,9 @@ will be weak and will be able to better allocate budget among other marketing ac
 
 **What is the deliverable?**
 - A dashboard with the information about the forecast.
-> ps: got [Telegram Bot](#Telegram-Bot) instead
+> got [Telegram Bot](#Telegram-Bot) instead
+
+<br>
 
 > **ps: We will use the data to forecast the second quarter of 2018 and the third quarter will be our "production data".**
 
@@ -57,7 +59,7 @@ You can found it on telegram searching for "OlistBot" or "@olist_telegram_bot".<
 Then, you just have to write the region (e.g north) you want to know the forecast.
 
 <p align="center">
-    <img src="images/olist_bot.PNG" width="850"/>
+    <img src="images/olist_bot.PNG" width="450"/>
 </p>
 
 > The app might be sleeping, so it can take a while for heroku to restart it.
