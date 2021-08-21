@@ -55,11 +55,11 @@ with an error equals to 7.74% (R$ 77,616.39).</strong>
 ### Telegram Bot
 
 As an extra task I decided to create this bot.<br>
-You can found it on telegram searching for "OlistBot" or "@olist_telegram_bot".<br>
+You can found it on telegram searching for ["OlistBot"](https://web.telegram.org/z/#1862189868) or "@olist_telegram_bot".<br>
 Then, you just have to write the region (e.g north) you want to know the forecast.
 
 <p align="center">
-    <img src="images/olist_bot.PNG" width="450"/>
+    <img src="images/olist_bot.PNG" width="300"/>
 </p>
 
 > The app might be sleeping, so it can take a while for heroku to restart it.
@@ -67,5 +67,3 @@ Then, you just have to write the region (e.g north) you want to know the forecas
 **Code:**<br>
 [Model API Deployment](https://github.com/pauloreis-ds/olist_regional_sales_forecast_app) <br>
 [Telegram Bot](https://github.com/pauloreis-ds/olist-telegram-bot) <br>
-
-(https://web.telegram.org/z/#1862189868)
