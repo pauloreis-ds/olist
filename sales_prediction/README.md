@@ -67,3 +67,5 @@ Then, you just have to write the region (e.g north) you want to know the forecas
 **Code:**<br>
 [Model API Deployment](https://github.com/pauloreis-ds/olist_regional_sales_forecast_app) <br>
 [Telegram Bot](https://github.com/pauloreis-ds/olist-telegram-bot) <br>
+
+I also used **docker** to build and run the application. [Check the video](https://youtu.be/sad52pli_a0).
