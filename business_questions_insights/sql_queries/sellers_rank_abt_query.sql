@@ -1,4 +1,13 @@
 
+SELECT *,
+       CASE WHEN percent_revenue <= 0.5 AND percent_orders <= 0.5 THEN 'LOW VALUE LOW FREQUENCY'
+       WHEN percent_revenue > 0.5 AND percent_orders <= 0.5 THEN 'HIGH VALUE'
+       WHEN percent_revenue <= 0.5 AND percent_orders > 0.5 THEN 'HIGH FREQUENCY'
+       WHEN percent_revenue < 0.9 AND percent_orders < 0.9 THEN 'PRODUCTIVE'
+       WHEN percent_revenue > 0.9 AND percent_orders > 0.9 THEN 'SUPER PRODUCTIVE'
+       ELSE 'PRODUCTIVE'
+       END AS segment_value_frequency
+FROM (
     SELECT seller_id,
            total_revenue/months_since_first_sale AS revenue_per_month,
            orders_quantity/months_since_first_sale AS orders_per_month,
@@ -14,3 +23,4 @@
               seller_id IS NOT NULL
         GROUP BY seller_id
     ) AS percent_rank_segment
+) AS segment_class
